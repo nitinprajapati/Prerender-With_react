@@ -5,7 +5,7 @@ const port = 1000;
 // const client = redis.createClient();
 const prerender = require('prerender-node');
 /** middleware to listen chatbots or seo */
-app.use(prerender.set('prerenderServiceUrl', 'http://127.0.0.1:8000'));
+app.use(prerender.set('prerenderServiceUrl', 'https://prerenderserver.herokuapp.com/'));
 app.use(express.static('build'));
 
 /* Redis settings for caching*/
