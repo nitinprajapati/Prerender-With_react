@@ -3,9 +3,10 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 1000;
 // const client = redis.createClient();
-const prerender = require('prerender-node');
+//const prerender = require('prerender-node');
 /** middleware to listen chatbots or seo */
-app.use(prerender.set('prerenderServiceUrl', 'https://prerenderserver.herokuapp.com/'));
+//app.use(prerender.set('prerenderServiceUrl', 'https://prerenderserver.herokuapp.com/'));
+app.use(require('prerender-node').set('prerenderToken', '7zyc9z72geTPuKYtl5fz'));
 app.use(express.static('build'));
 
 /* Redis settings for caching*/
