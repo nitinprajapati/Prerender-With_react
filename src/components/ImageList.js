@@ -14,7 +14,7 @@ class ImageList extends PureComponent {
         fetch('https://jsonplaceholder.typicode.com/photos')
             .then((resp) => resp.json())
             .then((data) => {
-                data = data.splice(0, 10);
+                data = data.splice(0, 100);
                 this.setState({plp : data})
             })
             .catch ((error) => console.error(JSON.stringify(error)));
